@@ -1,0 +1,5 @@
+torch==2.6
+lightning[pytorch-extra]==2.4
+wandb==0.19
+pandas==2.2
+pretty-midi==0.2.10
