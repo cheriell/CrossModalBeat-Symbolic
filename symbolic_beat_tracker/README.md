@@ -12,10 +12,13 @@ Also, please activate the python environment before running the training/inferen
 
 The symbolic beat tracking model is modified from the PM2S model, which is based on a CRNN architecture. We removed the tempo tracking part, to let the model jointly learn beat and downbeat tracking.
 
-Before running the training script, please change the `trainer.logger.init_args.save_dir` and `data.init_args.dataset_path` in the `config.yaml` file to your where you want to save your trianing logs and where you saved the ASAP dataset. To train the model, please run:
+Before running the training script, please change the `trainer.logger.init_args.save_dir` and `data.init_args.dataset_path` in the `config.yaml` file to where you want to save your trianing logs and where you saved the ASAP dataset. 
+
+To train the model, please run:
 
     python3 main.py fit --config config.yaml
 
+The trainig takes around 4 minutes to converge on the demo dataset split, on a H40 GPU.
 
 ## Inference
 
