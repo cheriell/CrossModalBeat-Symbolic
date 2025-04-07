@@ -18,7 +18,7 @@ To train the model, please run:
 
     python3 main.py fit --config config.yaml
 
-The trainig takes around 4 minutes to converge on the demo dataset split, on a H40 GPU.
+The trainig takes around 4 minutes to converge on the demo dataset split, on an H40 GPU.
 
 ## Inference
 
