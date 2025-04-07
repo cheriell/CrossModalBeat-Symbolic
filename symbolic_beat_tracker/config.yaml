@@ -1,0 +1,42 @@
+seed_everything: 42
+trainer:
+  logger:
+    class_path: lightning.pytorch.loggers.WandbLogger
+    init_args:
+      project: CrossModalBeat-Symbolic-symbolic_beat_tracker
+      name: demo-run
+      save_dir: /home/lel79bc/repositories/CrossModalBeat-Symbolic/symbolic_beat_tracker/wandb-logs
+  precision: 16
+  max_epochs: 500
+  devices: 1
+  log_every_n_steps: 5
+  reload_dataloaders_every_n_epochs: 0
+model:
+  class_path: models.beat_track_plmodule.BeatTrackPLModule
+  init_args:
+    hidden_size: 64
+    num_layers_convs: 5
+    num_layers_gru: 2
+    kernel_size: 3
+    dropout: 0.15
+    lr: 0.001
+    monitor: val_f1
+    mode: max
+    patience: 20
+    model_state_dict_filename: best
+    tasks:
+      - beat
+      - downbeat
+data:
+  class_path: data.datamodule.ASAPDataModule
+  init_args:
+    dataset_path: /mnt/c/Users/lel79bc/Desktop/Datasets/asap-dataset-1.2
+    max_length: 1000
+    batch_size_train: 4
+    batch_size_eval: 8
+    num_workers: 8
+    input_features:
+      - pitch
+      - onset
+      - duration
+      - velocity

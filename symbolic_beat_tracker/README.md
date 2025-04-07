@@ -4,12 +4,11 @@ This folder provides code for the symbolic beat tracker. To work on the code, pl
 
     cd ./symbolic_beat_tracker
 
-## Dataset
-
-Since the Maz-5 dataset is not publicly available, we provide a trianing pipeline for the [ASAP dataset](https://github.com/fosfrancesco/asap-dataset). We use the [v1.2 release](https://github.com/fosfrancesco/asap-dataset/releases) of the ASAP dataset.
-
-For the dataset split, please refer to `../ASAP_dataset_split.ipynb`
 
 ## Model training
 
+The symbolic beat tracking model is modified from the PM2S model, which is based on a CRNN architecture. We removed the tempo tracking part, to let the model jointly learn beat and downbeat tracking.
 
+To train the model, please run:
+
+    python3 main.py fit --config config.yaml
