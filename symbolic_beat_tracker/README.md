@@ -4,6 +4,9 @@ This folder provides code for the symbolic beat tracker. To work on the code, pl
 
     cd ./symbolic_beat_tracker
 
+Also, please activate the python environment before running the training/inference script.
+
+    conda activate <Your_Env_Name>
 
 ## Training
 
