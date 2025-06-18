@@ -1,6 +1,6 @@
 # Cross-Modal Beat Tracking (Symbolic model)
 
-|[Paper](https://doi.org/10.5334/tismir.238) | [Parent_Code_Repo](https://github.com/SunnyCYC/CrossModalBeat)
+| [Paper](https://doi.org/10.5334/tismir.238) | [Parent_Code_Repo](https://github.com/SunnyCYC/CrossModalBeat) |
 
 In this repo, we provide the code to train the symbolic beat tracking model in the TISMIR paper, _Cross-Modal Approaches to Beat Tracking: A Case Study on Chopin Mazurkas_.
 
