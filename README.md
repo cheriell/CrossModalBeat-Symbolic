@@ -1,4 +1,4 @@
-# Cross-Modal Beat Tracking (Symbolic model)
+# Cross-Modal Beat Tracking (Symbolic Beat Tracker)
 
 | [Paper](https://doi.org/10.5334/tismir.238) | [Parent_Code_Repo](https://github.com/SunnyCYC/CrossModalBeat) |
 
